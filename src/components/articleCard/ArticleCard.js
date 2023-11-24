@@ -8,8 +8,38 @@ import facebookIcon from "../../images/icon-facebook.svg";
 import twitterIcon from "../../images/icon-twitter.svg";
 import pinterestIcon from "../../images/icon-pinterest.svg";
 
+const shareVariants = {
+  hidden: {
+    opacity: 0,
+    top: "-6rem",
+  },
+  visible: {
+    opacity: 1,
+    top: "-8.3rem",
+    transition: {
+      type: "spring",
+      duration: 0.3,
+      staggerChildren: 0.05,
+    },
+  },
+};
+
+const iconVariants = {
+  hidden: {
+    opacity: 0,
+    scale: 0.1,
+  },
+  visible: {
+    opacity: 1,
+    scale: 1,
+  },
+  hover: {
+    y: -4,
+  },
+};
+
 const ArticleCard = () => {
-  const [openShare, setOpenShare] = useState(true);
+  const [openShare, setOpenShare] = useState(false);
 
   const handleMouseEnter = () => {
     setOpenShare(true);
@@ -55,25 +85,32 @@ const ArticleCard = () => {
             </button>
 
             {openShare && (
-              <aside
+              <motion.aside
                 className={styles.shareMenu}
                 onMouseEnter={handleMouseEnter}
                 onMouseLeave={handleMouseLeave}
+                variants={shareVariants}
+                initial="hidden"
+                animate="visible"
               >
-                <h3>share</h3>
+                <motion.h3 variants={iconVariants}>share</motion.h3>
 
-                <a href="#">
+                <motion.a href="#" variants={iconVariants} whileHover={"hover"}>
                   <img src={facebookIcon} alt="Facebook logo" />
-                </a>
+                </motion.a>
 
-                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate">
+                <motion.a
+                  href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate"
+                  variants={iconVariants}
+                  whileHover={"hover"}
+                >
                   <img src={twitterIcon} alt="Twitter logo" />
-                </a>
+                </motion.a>
 
-                <a href="">
+                <motion.a href="" variants={iconVariants} whileHover={"hover"}>
                   <img src={pinterestIcon} alt="Pinterest logo" />
-                </a>
-              </aside>
+                </motion.a>
+              </motion.aside>
             )}
           </div>
         </div>
