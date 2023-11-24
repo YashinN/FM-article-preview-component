@@ -1,5 +1,12 @@
+import MainLayout from "./components/MainLayout";
+import ArticleCard from "./components/articleCard/ArticleCard";
+
 function App() {
-  return <div className="App"></div>;
+  return (
+    <MainLayout>
+      <ArticleCard />
+    </MainLayout>
+  );
 }
 
 export default App;
