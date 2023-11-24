@@ -1,0 +1,19 @@
+:root {
+  --bg-main: #ecf2f8;
+  --bg-secondary: #fff;
+  --bg-dark: #48556a;
+
+  --text-main: #48556a;
+  --text-paragraph: #6e8098;
+  --text-light: #9daec2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
