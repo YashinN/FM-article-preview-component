@@ -1,10 +1,11 @@
 import styles from "./ArticleCard.module.css";
 
+import drawerImg from "../../images/drawers.jpg";
+
 const ArticleCard = () => {
   return (
     <div className={styles.articleCard}>
-      <img src="" alt="" />
-
+      <img src={drawerImg} alt="drawers" className={styles.drawerImg} />
       <section>
         <article>
           <h2>

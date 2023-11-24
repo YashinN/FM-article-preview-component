@@ -1,3 +1,11 @@
 .articleCard {
   max-width: 73rem;
+  display: grid;
+  grid-template-columns: minmax(20px, 28.5rem) minmax(20px, 44.5rem);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+.drawerImg {
+  width: 100%;
 }
