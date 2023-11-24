@@ -8,7 +8,15 @@ import twitterIcon from "../../images/icon-twitter.svg";
 import pinterestIcon from "../../images/icon-pinterest.svg";
 
 const ArticleCard = () => {
-  const [openShare, closeShare] = useState(false);
+  const [openShare, setOpenShare] = useState(true);
+
+  const handleMouseEnter = () => {
+    setOpenShare(true);
+  };
+
+  const handleMouseLeave = () => {
+    setOpenShare(false);
+  };
 
   return (
     <div className={styles.articleCard}>
@@ -38,25 +46,34 @@ const ArticleCard = () => {
           </div>
 
           <div className={styles.shareWrapper}>
-            <button className={styles.btnShare}>
+            <button
+              className={styles.btnShare}
+              onClick={() => setOpenShare((prev) => !prev)}
+            >
               <img src={btnIcon} alt="" />
             </button>
 
-            <aside className={styles.shareMenu}>
-              <h3>share</h3>
+            {openShare && (
+              <aside
+                className={styles.shareMenu}
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
+                <h3>share</h3>
 
-              <a href="#">
-                <img src={facebookIcon} alt="Facebook logo" />
-              </a>
+                <a href="#">
+                  <img src={facebookIcon} alt="Facebook logo" />
+                </a>
 
-              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate">
-                <img src={twitterIcon} alt="Twitter logo" />
-              </a>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate">
+                  <img src={twitterIcon} alt="Twitter logo" />
+                </a>
 
-              <a href="">
-                <img src={pinterestIcon} alt="Pinterest logo" />
-              </a>
-            </aside>
+                <a href="">
+                  <img src={pinterestIcon} alt="Pinterest logo" />
+                </a>
+              </aside>
+            )}
           </div>
         </div>
       </section>
