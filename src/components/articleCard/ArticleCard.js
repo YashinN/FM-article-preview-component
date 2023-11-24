@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { motion } from "framer-motion";
 import styles from "./ArticleCard.module.css";
 import drawerImg from "../../images/drawers.jpg";
 import profielImg from "../../images/avatar-michelle.jpg";
