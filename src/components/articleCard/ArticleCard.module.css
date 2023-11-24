@@ -1,7 +1,7 @@
 .articleCard {
   max-width: 73rem;
   display: grid;
-  grid-template-columns: minmax(32.7rem, 28.5rem) minmax(32.7rem, 44.5rem);
+  grid-template-columns: minmax(20px, 28.5rem) minmax(32.7rem, 44.5rem);
   border-radius: 1rem;
 }
 
@@ -12,9 +12,9 @@
 }
 
 .articleWrapper {
-  padding: 3.2rem;
   background-color: var(--bg-secondary);
   border-radius: 0 1rem 1rem 0;
+  padding: 4rem;
 }
 
 .article h2 {
