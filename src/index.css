@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
 :root {
   --bg-main: #ecf2f8;
   --bg-secondary: #fff;
@@ -24,4 +26,5 @@ body {
   align-items: center;
   min-height: 100vh;
   background-color: var(--bg-main);
+  font-family: "Manrope", sans-serif;
 }
