@@ -1,5 +1,5 @@
+import { useState } from "react";
 import styles from "./ArticleCard.module.css";
-
 import drawerImg from "../../images/drawers.jpg";
 import profielImg from "../../images/avatar-michelle.jpg";
 import btnIcon from "../../images/icon-share.svg";
@@ -8,6 +8,8 @@ import twitterIcon from "../../images/icon-twitter.svg";
 import pinterestIcon from "../../images/icon-pinterest.svg";
 
 const ArticleCard = () => {
+  const [openShare, closeShare] = useState(false);
+
   return (
     <div className={styles.articleCard}>
       <img src={drawerImg} alt="drawers" className={styles.drawerImg} />
@@ -42,9 +44,18 @@ const ArticleCard = () => {
 
             <aside className={styles.shareMenu}>
               <h3>share</h3>
-              <img src={facebookIcon} alt="Facebook logo" />
-              <img src={twitterIcon} alt="Twitter logo" />
-              <img src={pinterestIcon} alt="Pinterest logo" />
+
+              <a href="#">
+                <img src={facebookIcon} alt="Facebook logo" />
+              </a>
+
+              <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/transform-function/rotate">
+                <img src={twitterIcon} alt="Twitter logo" />
+              </a>
+
+              <a href="">
+                <img src={pinterestIcon} alt="Pinterest logo" />
+              </a>
             </aside>
           </div>
         </div>
