@@ -8,7 +8,7 @@ const ProfileContent = ({ children }) => {
         <img src={profielImg} alt="profile image" />
 
         <div>
-          <h3>Michelle Appleton</h3>
+          <h2>Michelle Appleton</h2>
           <p>28 Jun 2020</p>
         </div>
       </div>

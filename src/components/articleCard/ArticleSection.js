@@ -3,10 +3,10 @@ import styles from "./ArticleCard.module.css";
 const ArticleSection = () => {
   return (
     <article className={styles.article}>
-      <h2>
+      <h1>
         Shift the overall look and feel by adding these wonderful touches to
         furniture in your home
-      </h2>
+      </h1>
 
       <p>
         Ever been in a room and felt like something was missing? Perhaps it felt

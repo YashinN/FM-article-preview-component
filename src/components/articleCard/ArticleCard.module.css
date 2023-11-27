@@ -24,7 +24,7 @@
   margin-bottom: 2rem;
 }
 
-.article h2 {
+.article h1 {
   font-size: 2rem;
   letter-spacing: 0.25px;
   line-height: 2.8rem;
@@ -63,7 +63,7 @@
   border-radius: 100%;
 }
 
-.profileWrapper h3 {
+.profileWrapper h2 {
   color: var(--text-main);
 }
 
@@ -109,7 +109,7 @@
   height: 2rem;
 }
 
-.shareMenu h3 {
+.shareMenu h2 {
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--text-light);
@@ -129,7 +129,7 @@
     border-radius: 1rem 1rem 0 0;
   }
 
-  .article h2 {
+  .article h1 {
     font-size: 1.6rem;
     line-height: 2.4rem;
     letter-spacing: 0.2px;
