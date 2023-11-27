@@ -65,6 +65,8 @@
 
 .profileWrapper h2 {
   color: var(--text-main);
+  font-size: 1.3rem;
+  font-weight: 700;
 }
 
 .profileWrapper p {
@@ -113,6 +115,7 @@
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--text-light);
+  font-size: 1.3rem;
 }
 
 @media (max-width: 900px) {
