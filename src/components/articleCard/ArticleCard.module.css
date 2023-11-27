@@ -2,13 +2,13 @@
   max-width: 73rem;
   display: grid;
   grid-template-columns: minmax(20px, 28.5rem) minmax(32.7rem, 44.5rem);
-  border-radius: 1rem;
+  transition: all 2s linear;
 }
 
 .drawerImg {
   background-image: url("../../images//drawers.jpg");
   background-repeat: no-repeat;
-  position: left;
+  background-position: left;
   background-size: cover;
   border-radius: 1rem 0 0 1rem;
 }
@@ -21,6 +21,7 @@
 .article {
   padding: 0 4rem;
   padding-top: 4rem;
+  margin-bottom: 2rem;
 }
 
 .article h2 {
@@ -35,7 +36,6 @@
 .article p {
   font-size: 1.3rem;
   color: var(--text-paragraph);
-  margin-bottom: 2rem;
   font-weight: 400;
 }
 
@@ -107,11 +107,42 @@
 .shareMenu img {
   width: 2rem;
   height: 2rem;
-  fill: aqua;
 }
 
 .shareMenu h3 {
   letter-spacing: 5px;
   text-transform: uppercase;
   color: var(--text-light);
+}
+
+@media (max-width: 900px) {
+  .articleCard {
+    grid-template-columns: minmax(32.7rem, 50rem);
+    grid-template-rows: minmax(20rem, 20rem) 1fr;
+  }
+
+  .articleWrapper {
+    border-radius: 0 0 1rem 1rem;
+  }
+
+  .drawerImg {
+    border-radius: 1rem 1rem 0 0;
+  }
+
+  .article h2 {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    letter-spacing: 0.2px;
+  }
+
+  .article {
+    padding: 0 3.4rem;
+    margin-top: 3.6rem;
+    margin-bottom: 3.2rem;
+  }
+
+  .profileContent {
+    padding: 0 3.4rem;
+    padding-bottom: 2rem;
+  }
 }

@@ -28,3 +28,7 @@ body {
   background-color: var(--bg-main);
   font-family: "Manrope", sans-serif;
 }
+
+main {
+  padding: 0 2.4rem;
+}
