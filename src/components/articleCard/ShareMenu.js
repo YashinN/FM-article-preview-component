@@ -17,7 +17,7 @@ const ShareMenu = ({ handleMouseEnter, handleMouseLeave, openShare }) => {
           initial="hidden"
           animate="visible"
         >
-          <motion.h3 variants={iconVariants}>share</motion.h3>
+          <motion.h2 variants={iconVariants}>share</motion.h2>
 
           <motion.a href="#" variants={iconVariants} whileHover={{ y: -4 }}>
             <img src={facebookIcon} alt="Facebook logo" />
