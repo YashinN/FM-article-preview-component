@@ -66,7 +66,7 @@ const ArticleCard = () => {
 
   return (
     <div className={styles.articleCard}>
-      <img src={drawerImg} alt="drawers" className={styles.drawerImg} />
+      <figure className={styles.drawerImg}></figure>
       <section className={styles.articleWrapper}>
         <article className={styles.article}>
           <h2>
