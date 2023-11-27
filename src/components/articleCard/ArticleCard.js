@@ -10,17 +10,15 @@ import pinterestIcon from "../../images/icon-pinterest.svg";
 
 const shareVariants = {
   hidden: {
-    // opacity: 0,
-    // top: "-8rem",
+    opacity: 0,
   },
   visible: {
-    // opacity: 1,
-    // top: "-8.3rem",
-    // transition: {
-    //   type: "spring",
-    //   duration: 0.3,
-    //   staggerChildren: 0.05,
-    // },
+    opacity: 1,
+    transition: {
+      type: "spring",
+      duration: 0.3,
+      staggerChildren: 0.05,
+    },
   },
 };
 
@@ -91,6 +89,7 @@ const ArticleCard = () => {
           </div>
 
           <motion.button
+            aria-label="share menu"
             className={styles.btnShare}
             onClick={() => setOpenShare((prev) => !prev)}
             variants={btnVariants}
