@@ -14,7 +14,11 @@
 .articleWrapper {
   background-color: var(--bg-secondary);
   border-radius: 0 1rem 1rem 0;
-  padding: 4rem;
+}
+
+.article {
+  padding: 0 4rem;
+  padding-top: 4rem;
 }
 
 .article h2 {
@@ -37,6 +41,9 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding: 0 4rem;
+  padding-bottom: 4rem;
+  position: relative;
 }
 
 .profileWrapper {
@@ -70,10 +77,6 @@
   background-color: var(--bg-main);
 }
 
-.shareWrapper {
-  position: relative;
-}
-
 .shareMenu {
   background-color: var(--bg-dark);
   display: flex;
@@ -84,9 +87,8 @@
   height: 5.5rem;
   width: 24.8rem;
   position: absolute;
-  left: 50%;
   top: calc(-2.8rem + -5.5rem);
-  transform: translateX(-50%);
+  right: calc(-12.4rem + 4rem + 16px);
 }
 
 .shareMenu:after {
@@ -97,7 +99,7 @@
   background-color: var(--bg-dark);
   bottom: -12px;
   transform: rotate(45deg);
-  z-index: -1;
+  z-index: 1;
 }
 
 .shareMenu img {
