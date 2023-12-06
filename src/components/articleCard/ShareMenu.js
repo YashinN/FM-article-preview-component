@@ -1,4 +1,3 @@
-import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import styles from "./ArticleCard.module.css";
 import facebookIcon from "../../images/icon-facebook.svg";
@@ -8,11 +7,12 @@ import useClickOutside from "../../hooks/useClickOutside";
 
 const { iconVariants, shareVariants } = require("./Animation");
 
-const ShareMenu = ({ handleMouseEnter, handleMouseLeave, openShare }) => {
-  const shareMenuRef = useRef(null);
-
-  useClickOutside(handleMouseLeave, shareMenuRef, [openShare]);
-
+const ShareMenu = ({
+  handleMouseEnter,
+  handleMouseLeave,
+  openShare,
+  shareMenuRef,
+}) => {
   return (
     <>
       {openShare && (

@@ -2,9 +2,10 @@ import { motion } from "framer-motion";
 import styles from "./ArticleCard.module.css";
 const { btnVariants } = require("./Animation");
 
-const ShareButton = ({ openShare, setOpenShare }) => {
+const ShareButton = ({ openShare, setOpenShare, buttonRef }) => {
   return (
     <motion.button
+      ref={buttonRef}
       aria-label="share menu"
       className={styles.btnShare}
       onClick={() => setOpenShare((prev) => !prev)}
