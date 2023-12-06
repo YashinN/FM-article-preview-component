@@ -4,22 +4,14 @@ import styles from "./ArticleCard.module.css";
 import facebookIcon from "../../images/icon-facebook.svg";
 import twitterIcon from "../../images/icon-twitter.svg";
 import pinterestIcon from "../../images/icon-pinterest.svg";
+import useClickOutside from "../../hooks/useClickOutside";
 
 const { iconVariants, shareVariants } = require("./Animation");
 
 const ShareMenu = ({ handleMouseEnter, handleMouseLeave, openShare }) => {
   const shareMenuRef = useRef(null);
 
-  useEffect(() => {
-    const onClickOutside = (e) => {
-      if (shareMenuRef.current && !shareMenuRef.current.contains(e.target)) {
-        handleMouseLeave();
-      }
-    };
-
-    document.addEventListener("mousedown", onClickOutside);
-    return () => document.removeEventListener("mousedown", onClickOutside);
-  });
+  useClickOutside(handleMouseLeave, shareMenuRef, [openShare]);
 
   return (
     <>
