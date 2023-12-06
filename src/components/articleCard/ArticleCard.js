@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef } from "react";
 import styles from "./ArticleCard.module.css";
 import ArticleSection from "./ArticleSection";
 import ProfileContent from "./ProfileContent";

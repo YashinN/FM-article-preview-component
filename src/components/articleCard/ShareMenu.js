@@ -1,11 +1,26 @@
+import { useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import styles from "./ArticleCard.module.css";
 import facebookIcon from "../../images/icon-facebook.svg";
 import twitterIcon from "../../images/icon-twitter.svg";
 import pinterestIcon from "../../images/icon-pinterest.svg";
+
 const { iconVariants, shareVariants } = require("./Animation");
 
 const ShareMenu = ({ handleMouseEnter, handleMouseLeave, openShare }) => {
+  const shareMenuRef = useRef(null);
+
+  useEffect(() => {
+    const onClickOutside = (e) => {
+      if (shareMenuRef.current && !shareMenuRef.current.contains(e.target)) {
+        handleMouseLeave();
+      }
+    };
+
+    document.addEventListener("mousedown", onClickOutside);
+    return () => document.removeEventListener("mousedown", onClickOutside);
+  });
+
   return (
     <>
       {openShare && (
@@ -16,6 +31,7 @@ const ShareMenu = ({ handleMouseEnter, handleMouseLeave, openShare }) => {
           variants={shareVariants}
           initial="hidden"
           animate="visible"
+          ref={shareMenuRef}
         >
           <motion.h2 variants={iconVariants}>share</motion.h2>
 
